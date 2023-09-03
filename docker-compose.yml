@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  fr24feed:
+    image: sanvit/fr24  # Replace with your image name/tag
+    mac_address: ed:d0:8c:3f:ae:94  # Example MAC address, you can change this
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"  # Example USB device, change to your needs
+      # Add more devices if needed:
+      # - "/dev/your_device:/dev/your_device"
+    restart: unless-stopped
